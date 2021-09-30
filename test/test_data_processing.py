@@ -20,7 +20,7 @@ def datadir(fileroots):
     datadir = tempfile.mkdtemp()
     for froot in fileroots:
         fname = os.path.join(datadir, "{}.html.corrected.txt".format(froot))
-        with io.open(fname, mode="wt") as f:
+        with io.open(fname, mode="wt", encoding='utf8') as f:
             f.write(u".")
     yield datadir
     rmtree(datadir)

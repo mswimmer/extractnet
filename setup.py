@@ -120,17 +120,17 @@ setup(
     ext_modules=cythonize(ext_modules),
     install_requires=[
         'beautifulsoup4==4.9.3',
-        'Cython>=0.21.1',
+        'cython>=0.21.1',
         'ftfy>=4.1.0,<5.0.0',
-        'lxml',
-        'numpy>=1.19.0',
+        'lxml>=4.6.3,<5.0.0',
+        'numpy>=1.19.5',
         'scikit-learn>=0.22.0',
-        'scipy>=0.17.0',
+        'scipy>=1.5.4',
         'sklearn-crfsuite==0.3.6',
         'dateparser==1.0.0',
         'joblib==0.17.0',
-        'catboost==0.24.2',
-        'courlan==0.2.3',
-        'htmldate==0.7.2'
+        'catboost>=0.26.1',
+        'courlan>=0.4.2',
+        'htmldate>=0.9.1'
     ]
 )

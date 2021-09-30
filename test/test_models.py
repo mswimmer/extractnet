@@ -13,7 +13,7 @@ FIXTURES = os.path.join('test', 'datafiles')
 
 @pytest.fixture(scope="module")
 def html():
-    with io.open(os.path.join(FIXTURES, "models_testing.html"), mode="rt") as f:
+    with io.open(os.path.join(FIXTURES, "models_testing.html"), mode="rt", encoding='utf8') as f:
         html_ = f.read()
     return html_
 

@@ -11,7 +11,7 @@ FIXTURES = os.path.join('test', 'datafiles')
 
 
 def test_readability_make_readability_features():
-    with io.open(os.path.join(FIXTURES, 'models_testing.html')) as fin:
+    with io.open(os.path.join(FIXTURES, 'models_testing.html'), encoding='utf8') as fin:
         html = fin.read()
     blks = TagCountReadabilityBlockifier.blockify(html)
     actual_features = _readability.make_readability_features(blks)

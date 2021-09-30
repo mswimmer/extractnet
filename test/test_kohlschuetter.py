@@ -14,7 +14,7 @@ from extractnet.compat import range_, str_cast
 @pytest.fixture(scope="module")
 def html():
     fname = os.path.join("test", "datafiles", "HTML", "page_for_testing.html")
-    with io.open(fname, mode="rt") as f:
+    with io.open(fname, mode="rt", encoding='utf8') as f:
         html_ = f.read()
     return html_
 
